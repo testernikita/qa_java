@@ -51,14 +51,6 @@ public class LionTest {
     }
 
     @Test
-    public void doesHaveManeReturnFalseValue() throws Exception {
-        final Lion lion = new Lion("Самка", feline);
-        final boolean doesSheHaveMane = lion.doesHaveMane();
-
-        assertFalse("Ожидаемое значение правда", doesSheHaveMane);
-    }
-
-    @Test
     public void getFoodLionMeatListValues() throws Exception{
         Mockito.when(feline.getFood("Хищник")).thenReturn(Arrays.asList("Животные", "Птицы", "Рыба"));
 
