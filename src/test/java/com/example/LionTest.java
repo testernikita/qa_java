@@ -66,7 +66,7 @@ public class LionTest {
         final List<String> expectedLionMeatList = Arrays.asList("Животные", "Птицы", "Рыба");
         final List<String> actualLionMeatList = lion.getFood();
 
-        assertEquals("Ожидаются значения в списке: \"Животные\", \"Птицы\", \"Рыба\"", expectedLionMeatList, actualLionMeatList);
+        assertEquals(expectedLionMeatList, actualLionMeatList);
     }
 
 }

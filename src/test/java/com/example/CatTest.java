@@ -26,7 +26,7 @@ public class CatTest {
         final List<String> expectedCatMeatList = Arrays.asList("Животные", "Птицы", "Рыба");
         final List<String> actualCatMeatList = cat.getFood();
 
-        assertEquals("Ожидаются значения в списке: \"Животные\", \"Птицы\", \"Рыба\"", expectedCatMeatList, actualCatMeatList);
+        assertEquals(expectedCatMeatList, actualCatMeatList);
     }
 
 }

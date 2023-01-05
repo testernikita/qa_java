@@ -15,7 +15,7 @@ public class FelineTest {
         final List<String> expectedMeatList = Arrays.asList("Животные", "Птицы", "Рыба");
         final List<String> actualMeatList = feline.getFood("Хищник");
 
-        assertEquals("Ожидаются значения в списке: \"Животные\", \"Птицы\", \"Рыба\"", expectedMeatList, actualMeatList);
+        assertEquals(expectedMeatList, actualMeatList);
     }
 
     @Test
