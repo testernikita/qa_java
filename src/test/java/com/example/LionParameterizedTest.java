@@ -10,11 +10,11 @@ import static org.junit.Assert.*;
 public class LionParameterizedTest {
 
     private Feline feline = new Feline();
-    private final String GenderValue;
+    private final String genderValue;
     private final boolean expectedValue;
 
     public LionParameterizedTest(String GenderValue, boolean expectedValue) {
-        this.GenderValue = GenderValue;
+        this.genderValue = GenderValue;
         this.expectedValue = expectedValue;
     }
 
@@ -28,7 +28,7 @@ public class LionParameterizedTest {
 
     @Test
     public void shouldHaveManeValue() throws Exception {
-        Lion lion = new Lion(GenderValue, feline);
+        Lion lion = new Lion(genderValue, feline);
         boolean hasMane = lion.doesHaveMane();
 
         assertEquals(expectedValue, hasMane);
