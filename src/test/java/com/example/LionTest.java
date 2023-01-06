@@ -1,6 +1,8 @@
 package com.example;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -17,22 +19,19 @@ public class LionTest {
     @Mock
     private Feline feline;
 
-    @Test(expected = Exception.class)
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+
+    @Test
     public void getExceptionLionIncorrectLionSex() throws Exception{
-        final Lion lion = new Lion("не определён", feline);
+        thrown.expect(Exception.class);
+        thrown.expectMessage("Используйте допустимые значения пола животного - самец или самка");
+
+        new Lion("не определён", feline);
     }
 
     @Test
-    public void getExceptionLionTextIncorrectLionSex() throws AssertionError{
-        try {
-            final Lion lion = new Lion("не определён", feline);
-        } catch (Exception thrown) {
-            assertEquals("Используйте допустимые значения пола животного - самец или самка", thrown.getMessage());
-        }
-    }
-
-    @Test
-    public void getKittenslionCorrectCountValue() throws Exception {
+    public void getKittensLionCorrectCountValue() throws Exception {
         Mockito.when(feline.getKittens()).thenReturn(1);
 
         final Lion lion = new Lion("Самка", feline);
