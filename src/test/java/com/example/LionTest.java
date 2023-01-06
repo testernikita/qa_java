@@ -38,7 +38,7 @@ public class LionTest {
         final int expectedLionKittensCount = 1;
         final int actualLionKittensCounts = lion.getKittens();
 
-        assertEquals("Ожидаемое количество львят: 1", expectedLionKittensCount, actualLionKittensCounts);
+        assertEquals("Ожидаемое количество львят: " + expectedLionKittensCount, expectedLionKittensCount, actualLionKittensCounts);
     }
 
     @Test

@@ -24,7 +24,7 @@ public class FelineTest {
         final String expectedFamily = "Кошачьи";
         final String actualFamily = feline.getFamily();
 
-        assertEquals("Ожидается значение для семейства: \"Кошачьи\"", expectedFamily, actualFamily);
+        assertEquals("Ожидается значение для семейства: " + expectedFamily, expectedFamily, actualFamily);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class FelineTest {
         final int expectedFelineKittensCount = 1;
         final int actualFelineKittensCounts = feline.getKittens();
 
-        assertEquals("Ожидаемое количество котят семейства кошачьи: 1", expectedFelineKittensCount, actualFelineKittensCounts);
+        assertEquals("Ожидаемое количество котят семейства кошачьи: " + expectedFelineKittensCount, expectedFelineKittensCount, actualFelineKittensCounts);
     }
 
 }
